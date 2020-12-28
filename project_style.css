@@ -1,0 +1,33 @@
+header {
+  text-align: center;
+  font-family: sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+}
+
+.row {
+  text-decoration: none;
+  list-style-type: none;
+}
+.board {
+  display: inline-block;
+  text-decoration: none;
+  border: solid 3px black;
+
+  border-radius: 20px;
+}
+
+.card p{
+    font-family: sans-serif;
+    text-align: center;
+  /* border-top: 3px black solid; */
+  text-decoration: none;
+  color: black;
+  width: 100%;
+  border-radius: 10px;
+  margin:0px 10px;
+}
+
+.image{
+    padding:20px 20px;
+}
