@@ -1,33 +1,29 @@
-header {
+ header {
   text-align: center;
   font-family: sans-serif;
   font-weight: bold;
   font-size: 40px;
 }
 
-.row {
-  text-decoration: none;
-  list-style-type: none;
-}
-.board {
+.board{
+  width: 200px;
   display: inline-block;
-  text-decoration: none;
-  border: solid 3px black;
-
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 20px;
+  padding: 20px 20px;
 }
 
-.card p{
-    font-family: sans-serif;
-    text-align: center;
-  /* border-top: 3px black solid; */
-  text-decoration: none;
-  color: black;
-  width: 100%;
-  border-radius: 10px;
-  margin:0px 10px;
+.board:hover{
+  position: relative;
+  bottom:5px;
+  box-shadow: 0 4px 8px 0;
 }
 
-.image{
-    padding:20px 20px;
+h4{
+  text-align: center;
+  margin:10px 10px;
+}
+.board p{
+  text-align: center;
+  margin:auto;
 }
