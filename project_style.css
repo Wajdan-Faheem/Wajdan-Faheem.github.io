@@ -8,15 +8,13 @@
 .row{
   display: flex;
   justify-content:center;
-  margin:auto;
   
 }
 
 .board{
   
-  margin:0;
   vertical-align:top;
-  width: 200px;
+  width: 17%;
   display: inline-block;
   box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
   border-radius: 20px;
