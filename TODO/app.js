@@ -63,8 +63,8 @@ searchForm.search.addEventListener("keyup", (e) => {
         }
     });
 });
-
-if (localStorage.data === null) {
+console.log(localStorage.data);
+if (localStorage.getItem('data') === null) {
     localStorage.setItem("data", JSON.stringify([]));
 } else {
     JSON.parse(localStorage.data).forEach((i) => {
@@ -74,3 +74,4 @@ if (localStorage.data === null) {
     //     generalTemplate(i);
     // });
 }
+
