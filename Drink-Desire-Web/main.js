@@ -30,7 +30,7 @@ login.addEventListener("submit", (e) => {
             console.log(cred, cred.user, cred.uid);
         })
         .catch((err) => {
-            console.log(err);
+            alert("The account does not exist or there was an error!");;
         });
     login.reset();
 });
