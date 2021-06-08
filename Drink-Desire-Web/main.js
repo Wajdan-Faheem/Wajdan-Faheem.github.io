@@ -2,6 +2,7 @@ const signup = document.querySelector("#signup");
 
 signup.addEventListener("submit", (e) => {
     e.preventDefault();
+
     const email = signup["signup-email"].value;
     const password = signup["signup-password"].value;
 
@@ -13,7 +14,7 @@ signup.addEventListener("submit", (e) => {
             //container_signup.style.display = 'none';
         })
         .catch((err) => {
-            console.log(err);
+            alert(err.message);
         });
 });
 
