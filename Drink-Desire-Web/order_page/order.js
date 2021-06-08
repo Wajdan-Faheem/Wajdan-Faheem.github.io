@@ -33,9 +33,10 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
     //everytime there is a change in the database
     snapshot.docChanges().forEach((change) => {
         const doc = change.doc;
-            if(doc.change === "added"){
-            circle = color((doc.data().strength/100).toString());
-            list.innerHTML += `
+        console.log(change);
+            if (change.type === "added" || change.type === "modified") {
+                circle = color((doc.data().strength / 100).toString());
+                list.innerHTML += `
             <li>
             <span class = "dot" style="background-color: ${circle}"></span>
             <div class="container-2">
