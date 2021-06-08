@@ -1,4 +1,4 @@
-const color = (e)=>{
+const color = (e) => {
     let colors;
     if (e === "1") {
         colors = "#D7CCC8";
@@ -25,19 +25,19 @@ const color = (e)=>{
 const list = document.querySelector(".drink_list");
 
 auth.onAuthStateChanged((user) => {
-    if (user===null){
-        window.location = "../index.html"
-}});
+    if (user === null) {
+        window.location = "../index.html";
+    }
+});
 
 db.collection("Restrictions").onSnapshot((snapshot) => {
     //everytime there is a change in the database
     snapshot.docChanges().forEach((change) => {
         const doc = change.doc;
         console.log(change);
-            if (change.type === "added" || change.type === "modified") {
-                circle = color((doc.data().strength / 100).toString());
-                list.innerHTML += `
-            <li>
+
+        let html = `
+            <li data-id = "${doc.id}" >
             <span class = "dot" style="background-color: ${circle}"></span>
             <div class="container-2">
                 <p class = "name">${doc.data().name}</p>
@@ -46,15 +46,30 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
         </li> 
         <br>
             `;
-            }
+
+        if (change.type === "added") {
+            circle = color((doc.data().strength / 100).toString());
+            list.innerHTML += html;
+            list;
+        } else if (change.type === "modified") {
+            document.querySelectorAll("li").forEach((i) => {
+                if (i["data-id"] === doc.id) {
+                    i.innerHTML = `            
+                <span class = "dot" style="background-color: ${circle}"></span>
+                <div class="container-2">
+                <p class = "name">${doc.data().name}</p>
+                <span class = "sugar">Takes ${doc.data().sugar} sugar(s)</span>
+                </div>`;
+                }
+            });
+        }
     });
 });
 
-const setting =  document.querySelector('.setting');
-setting.addEventListener('click',e=>{
-    window.location="../data_enter/data.html"
-
-})
+const setting = document.querySelector(".setting");
+setting.addEventListener("click", (e) => {
+    window.location = "../data_enter/data.html";
+});
 
 document.querySelectorAll(".logs").forEach((item) => {
     item.addEventListener("click", (e) => {
