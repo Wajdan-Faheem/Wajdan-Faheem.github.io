@@ -53,6 +53,7 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
             list;
         } else if (change.type === "modified") {
             document.querySelectorAll("li").forEach((i) => {
+                console.log(i,i["data-id"], i["data-id"]===doc.id);
                 if (i["data-id"] === doc.id) {
                     i.innerHTML = `            
                 <span class = "dot" style="background-color: ${circle}"></span>
