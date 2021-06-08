@@ -34,7 +34,8 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
     //everytime there is a change in the database
     snapshot.docChanges().forEach((change) => {
         const doc = change.doc;
-        console.log(change);
+        console.log(change, change.type);
+        circle = color((doc.data().strength / 100).toString());
 
         let html = `
             <li data-id = "${doc.id}" >
@@ -48,7 +49,6 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
             `;
 
         if (change.type === "added") {
-            circle = color((doc.data().strength / 100).toString());
             list.innerHTML += html;
             list;
         } else if (change.type === "modified") {
