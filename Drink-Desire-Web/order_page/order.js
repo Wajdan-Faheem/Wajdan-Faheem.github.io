@@ -33,7 +33,7 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
     //everytime there is a change in the database
     snapshot.docChanges().forEach((change) => {
         const doc = change.doc;
-
+            if(doc.change === "added"){
             circle = color((doc.data().strength/100).toString());
             list.innerHTML += `
             <li>
@@ -45,6 +45,7 @@ db.collection("Restrictions").onSnapshot((snapshot) => {
         </li> 
         <br>
             `;
+            }
     });
 });
 
