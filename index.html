@@ -14,20 +14,20 @@
                 </a>
                 <ul>
                     <li>
-                        <a>Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a to="#about">About</a>
+                        <a href="#about">About</a>
                     </li>
                     <li>
-                        <a>Projects</a>
+                        <a href="#projects">Projects</a>
                     </li>
                     <li>
-                        <a>Resume</a>
+                        <a target="_blank" href="./assets/Wajdan-Faheem-Resume.pdf">Resume</a>
                     </li>
                 </ul>
             </header>
-            <section>
+            <section id = "home">
                 <img
                     src="./assets/stars.png"
                     id="stars"
@@ -54,9 +54,10 @@
                 <div
                     class="icon-move"
                 >
-                    <i class="fab fa-github icon"></i>
-                    <i class="fab fa-linkedin-in icon"></i>
-                    <i class="far fa-file-pdf icon"></i>
+                <a target = "_blank" href="https://github.com/WajdanF"><i class="fab fa-github icon"></i></a>
+                    
+                     <a target = "_blank" href="https://www.linkedin.com/in/wajdan-faheem/"><i class="fab fa-linkedin-in icon"></i></a>
+                    <a target="_blank" href="./assets/Wajdan-Faheem-Resume.pdf"><i class="far fa-file-pdf icon"></i></a>
                 </div>
                 <img
                     src="./assets/mountains_front.png"
@@ -64,13 +65,13 @@
                     alt=""
                 />
             </section>
-            <div class="sec" id="sec">
-                <h2 style= "font-weight: 500; text-align: center" >
+            <div id="about" class="sec" id="sec">
+                <h2  style= "font-weight: 500; text-align: center" >
                     LET ME <span class="colorspan">INTRODUCE </span>
                     MYSELF
                 </h2>
                 <img
-                    id="about"
+                    
                     src="./assets/avatar.svg"
                     alt=""
                     style= "display: block; margin: 0 auto" 
@@ -105,8 +106,10 @@
                     </p>
                 </div>
             </div>
-
-            <h2 class ="h2">My Projects</h2>
+        <div class="color-project" id="projects">
+            <br>
+            <span class="h2 colorspan">My Projects</span>
+            <br>
             <div class="row">
                 <a class = "a" target="_blank" href="./Drink-Desire-Web/index.html">
                     <div class="card border">
@@ -212,7 +215,9 @@
                     </div>
                 </a>
             </div>
-            <script src="index.js"></script>
+        </div>
+    
+    <script src="index.js"></script>
             
   </body>
 </html>
