@@ -2,65 +2,217 @@
 <html>
   <head>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="project_style.css">
     <title>Wajdan Faheem</title>
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script src="https://kit.fontawesome.com/99d48cdb2b.js" crossorigin="anonymous"></script>
   </head>
   <body>
-    <header>
-      <p>Welcome, I'm Wajdan Faheem</p>
-    </header>
-    <div>
-      <img
-        src="assets/user_icon.webp"
-        alt="User Image"
-        class="user"
-        width="342px"
-        height="342px"
-      />
-    </div>
-    <br />
-    <main>
-      <nav>
-        <a href="https://github.com/WajdanF" class="link">
-          <img
-            src="assets/github logo.png"
-            alt="github logo"
-            width="64px"
-            height="64px"
-          />
-          <br />
-          GitHub</a
-        >
+     <header>
+                <a to="/" class="logo">
+                    WF
+                </a>
+                <ul>
+                    <li>
+                        <a>Home</a>
+                    </li>
+                    <li>
+                        <a to="#about">About</a>
+                    </li>
+                    <li>
+                        <a>Projects</a>
+                    </li>
+                    <li>
+                        <a>Resume</a>
+                    </li>
+                </ul>
+            </header>
+            <section>
+                <img
+                    src="./assets/stars.png"
+                    id="stars"
+                    alt=""
+                />
+                <img
+                    src="./assets/moon.png"
+                    id="moon"
+                    alt=""
+                />
+                <img
+                    src="./assets/mountains_behind.png"
+                    id="mountains_behind"
+                    alt=""
+                />
+                <h2
+                    id="text"
+                    style="font-weight: 530"
+                >
+                    Hi There! <span class="wave">👋🏻</span>
+                    <br />
+                    I'M <span class="colorspan">WAJDAN FAHEEM</span>
+                </h2>
+                <div
+                    class="icon-move"
+                >
+                    <i class="fab fa-github icon"></i>
+                    <i class="fab fa-linkedin-in icon"></i>
+                    <i class="far fa-file-pdf icon"></i>
+                </div>
+                <img
+                    src="./assets/mountains_front.png"
+                    id="mountains_front"
+                    alt=""
+                />
+            </section>
+            <div class="sec" id="sec">
+                <h2 style= "font-weight: 500; text-align: center" >
+                    LET ME <span class="colorspan">INTRODUCE </span>
+                    MYSELF
+                </h2>
+                <img
+                    id="about"
+                    src="./assets/avatar.svg"
+                    alt=""
+                    style= "display: block; margin: 0 auto" 
+                />
+                <div class="description">
+                    <br />
+                    <p>
+                        I am a second year Software Engineering student at
+                        McMaster University.
+                    </p>
+                    <br />
+                    <p>
+                        I fell in love with programming and I have at least
+                        learnt something, I think… 🤷‍♂️
+                    </p>
+                    <br />
+                    <p>
+                        I am a
+                        <span
+                            class="colorspan"
+                            style= "font-size: 1.2em" 
+                        >
+                            team player, outgoing, dedicated, and open-minded
+                        </span>
+                        .
+                        <span>
+                            <br />
+                            <br /> I get across to people and adjust to changes
+                            with ease
+                        </span>
+                        .
+                    </p>
+                </div>
+            </div>
 
-        <a href="https://www.linkedin.com/in/wajdan-faheem/" class="link">
-          <img
-            src="assets/linkedin logo.png"
-            alt="LinkedIn logo"
-            width="64px"
-            height="64px"
-          />
-          <br />
-          Linkedin</a
-        >
-        <a target = "_blank" href="./assets/Wajdan-Faheem-Resume.pdf" class="link">
-          <img
-            src="assets/resume.png"
-            alt="Resume logo"
-            width="64px"
-            height="64px"
-          /><br />
-          Resume</a
-        >
-        <a href="projects.html" class="link">
-          <img
-            src="assets/projects.png"
-            alt="Project logo"
-            width="64px"
-            height="64px"
-          /><br />
-          Projects</a
-        >
-      </nav>
-    </main>
+            <h2 class ="h2">My Projects</h2>
+            <div class="row">
+                <a class = "a" target="_blank" href="./Drink-Desire-Web/index.html">
+                    <div class="card border">
+                        <img class = "img" src="./assets/coffee.png" alt="" />
+                        <h1 class ="h1">Drink Desire</h1>
+                        <p>LOL</p>
+                    </div>
+                </a>
+                <a  class = "a"
+                    target="_blank"
+                    href="https://github.com/WajdanF/Electromyography-Controlled-Robotic-Arm"
+                >
+                    <div class="card border">
+                        <img class = "img" src="./assets/robotic-arm.png" alt="" />
+                        <h1 class ="h1">Electromyography Controlled Robotic Arm</h1>
+                        <p>Electromyography Controlled Robotic Arm</p>
+                    </div>
+                </a>
+                <a
+                class = "a"
+                    target="_blank"
+                    href="https://github.com/WajdanF/Python-Action-Game-Adventure-Run"
+                >
+                    <div class="card">
+                        <img class = "img" src="./assets/adv-run.png" alt="" />
+                        <h1 class ="h1">Adventure Run</h1>
+                        <p>LOL</p>
+                    </div>
+                </a>
+            </div>
+            <br />
+            <br />
+            <div class="row">
+                <a
+                class = "a"
+                    target="_blank"
+                    href="https://github.com/WajdanF/Employee-Database"
+                >
+                    <div class="card">
+                        <img class = "img" src="./assets/database.png" alt="" />
+                        <h1 class ="h1">Employee Database</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+
+                <a class = "a" target="_blank" href="https://github.com/WajdanF/World-Time">
+                    <div class="card">
+                        <img class = "img" src="./assets/world time.jpg" alt="" />
+                        <h1 class ="h1">World Time</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+                <a  class="a"
+                    target="_blank"
+                    href="https://github.com/WajdanF/Recycling-Sorter-Utilizing-Sensors"
+                >
+                    <div class="card border">
+                        <img class = "img" src="./assets/recycle.jpg" alt="" />
+                        <h1 class ="h1">Recycling Sorter Utilizing Sensors</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+            </div>
+
+            <br />
+            <br />
+            <div class="row">
+                <a  class="a"
+                    target="_blank"
+                    href="https://github.com/WajdanF/HSV-Color-Filtering"
+                >
+                    <div class="card">
+                        <img class = "img" src="./assets/color.jpg" alt="" />
+                        <h1 class ="h1">HSV Color Filtering</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+                <a class = "a" 
+                target="_blank" href="TODO/TODO_index.html">
+                    <div class="card">
+                        <img class = "img" src="./assets/to-do-list-apps.png" alt="" />
+                        <h1 class ="h1">TODO List</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+                <a class = "a" target="_blank" href="Weather-App/index.html">
+                    <div class="card">
+                        <img class = "img" src="./assets/weather.gif" alt="" />
+                        <h1 class ="h1">Weather App</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+            </div>
+
+            <br />
+            <br />
+            <div class="row">
+                <a class = "a" target="_blank" href="./Chat-Room/index.html">
+                    <div class="card">
+                        <img class = "img" src="./assets/chats.png" alt="" />
+                        <h1 class ="h1">Chat Room</h1>
+                        <p>Okay</p>
+                    </div>
+                </a>
+            </div>
+            <script src="index.js"></script>
+            
   </body>
 </html>
