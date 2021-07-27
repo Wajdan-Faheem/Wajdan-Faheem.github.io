@@ -185,3 +185,11 @@ section img#mountains_front{
     text-align: center;
 }
 
+.circle1{
+    position: absolute;
+    top:0;
+    z-index:10000000000000000;
+    width: 200px;
+    height: 200px;
+    background:black;
+}
